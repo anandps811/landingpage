@@ -93,7 +93,7 @@ const Hero = () => {
         
         {/* Left Content Column */}
         <div className="flex flex-col text-center md:text-left items-center md:items-start">
-          <p className="mb-6 text-[10px] md:text-[11px] font-playfair font-bold uppercase tracking-[0.3em] text-[#e1524b]">
+          <p className="mb-6 text-[10px] md:text-[11px]  font-bold uppercase tracking-[0.3em] text-[#e1524b]">
             School of Love — Live Workshop
           </p>
 
@@ -151,15 +151,15 @@ const Hero = () => {
         </div>
 
         {/* Right Image Column with Overlay */}
-        <div className="relative flex justify-center md:justify-end mt-12 md:mt-0">
+        <div className="relative flex justify-center md:justify-end mt-12 md:mt-0 hidden lg:block">
           <img 
             src={overlayImg} 
             alt="" 
-            className="absolute top-[-5%] left-[-10%] md:top-[-10px] md:left-[66px] h-[108%] w-[90%] max-w-none opacity-50 md:opacity-100" 
+            className="absolute top-[-5%] left-[-10%] md:top-[-10px] md:left-[0px] h-[108%] w-[90%] max-w-none opacity-50 md:opacity-100" 
           />
 
-          <div className="relative z-10 rounded-[24px] bg-[#111] p-[8px] md:p-[10px] shadow-2xl">
-            <div className="h-[280px] w-[220px] overflow-hidden rounded-[18px] md:h-[380px] md:w-[310px]">
+          <div className="relative z-10 rounded-[24px]  p-[8px] md:p-[10px] ">
+            <div className="h-[280px] w-[220px] overflow-hidden rounded-[18px] md:h-[380px] md:w-[350px]">
               <img
                 src="/src/assets/landing.png"
                 alt="Couple Silhouette"
@@ -306,17 +306,17 @@ const Hero = () => {
           {items.map((item, index) => (
             <div
               key={index}
-              className="bg-[#efe7e3] rounded-xl p-6 text-left hover:shadow-md transition"
+              className="bg-[#FAECEB] rounded-xl py-10 px-6 text-left hover:shadow-md transition border border-[#E7E0DA]"
             >
               <img
                 src={item.icon}
                 alt="icon"
                 className="w-5 h-5 mb-4 object-contain"
               />
-              <h3 className="text-gray-800 font-sans font-medium text-[13px] md:text-sm leading-snug">
+              <h3 className="text-[#332C28] font-serif font-bold text-[13px] max-w-[230px] md:text-sm leading-[21px]">
                 {item.title}
               </h3>
-              <p className="text-gray-500 text-[11px] md:text-xs mt-2 font-sans">
+              <p className="text-[#605752] text-[11px] md:text-xs mt-2 font-sans">
                 {item.desc}
               </p>
             </div>
@@ -333,7 +333,14 @@ const Hero = () => {
     <section className="bg-[#f6f2ef] px-6 py-16 md:py-20 font-sans">
       <div className="mx-auto max-w-[900px]">
         <div className="grid gap-x-12 gap-y-12 md:grid-cols-[320px_1fr] items-center md:items-start text-center md:text-left">
-          
+          <div className='md:hidden'>
+          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#e1524b]">
+              YOUR MENTOR
+            </span>
+            <h2 className="mt-2 font-serif text-[32px] md:text-[42px] font-semibold leading-tight text-[#2d252a]">
+              Madhu Lakhlan
+            </h2>
+            </div>
           <div className="flex flex-col items-center md:items-start">
             <div className="rounded-[20px] shadow-lg w-[240px] h-[300px] md:w-[240px] md:h-[255px] overflow-hidden">
               <img
@@ -351,26 +358,32 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col">
-            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#e1524b]">
+            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#e1524b] hidden md:inline-block ">
               YOUR MENTOR
             </span>
-            <h2 className="mt-2 font-serif text-[32px] md:text-[42px] font-semibold leading-tight text-[#2d252a]">
+            <h2 className="mt-2 font-serif text-[32px] md:text-[42px] font-semibold leading-tight text-[#2d252a] hidden md:inline-block">
               Madhu Lakhlan
             </h2>
 
-            <div className="mt-6 text-[14px] leading-[1.6] text-[#5a545c] max-w-full md:max-w-[440px] space-y-4">
-              <p className="text-[#605752]">
-                <strong className="font-bold text-[#2d252a]">I was once the woman sitting in this workshop.</strong>
+            <div className="mt-6 text-[14px] leading-[1.6] text-[#5a545c] max-w-full md:max-w-[400px]">
+              <p className="text-[#605752] pb-2">
+                <strong className="font-bold text-[#605752]">I was once the woman sitting in this workshop.</strong>
                 <br />
-                Before I became the coach, I was the student. Heartaches I couldn’t explain. Relationships that started with so much hope and ended in a silence I didn’t understand.
-              </p>
+Before I became the coach, I was the student.
+Heartaches I couldn't explain. Relationships that started with so much hope and ended in a silence I didn't understand. Sleepless nights wondering what was wrong with me - why love, something so natural for everyone around me, felt impossibly out of reach.
+I didn't need more advice. I needed someone to show me what I couldn't see from the inside.
+Through deep inner work - understanding my own patterns, healing what I didn't know was wounded - everything shifted. I didn't just find love. I became ready for it.              </p>
               
-              <p className="py-2 font-medium italic text-[#E74D3C]">
+              <p className="font-bold italic text-[#605752]">
                 "I stopped chasing love. And that's when it found me."
               </p>
 
               <p>
-                Today, I’ve guided 30,000+ people across 5 countries through this exact transformation. I’ve spoken at TEDx and been featured in major national media.
+               Today, I've guided 30,000+ people across 5 countries through this exact transformation. I've spoken at TEDx. I've been featured on Mahaa News, Fever 104 FM, and Ten News across India. [Certifications to be added here]
+            <br />
+             But what I'm most proud of is far simpler than all of that.
+I have the love I once thought wasn't possible for someone like me.
+And I built this workshop because you deserve the same thing.
               </p>
             </div>
 
@@ -384,7 +397,7 @@ const Hero = () => {
 
         {/* Video Placeholder */}
         <div className="mt-16 md:mt-20 flex justify-center">
-          <div className="group relative flex aspect-video w-full max-w-[800px] cursor-pointer items-center justify-center overflow-hidden rounded-[16px] md:rounded-[24px] bg-[#141414] shadow-2xl">
+          <div className="group relative flex aspect-video w-full max-w-[600px] cursor-pointer items-center justify-center overflow-hidden rounded-[16px] md:rounded-[24px] bg-[#141414] shadow-2xl">
             <div className="flex h-[45px] w-[70px] md:h-[55px] md:w-[85px] items-center justify-center rounded-[12px] md:rounded-[15px] bg-[#ff0000] transition-transform group-hover:scale-110">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="white" className="md:w-[32px] md:h-[32px]">
                 <path d="M8 5v14l11-7z" />
@@ -439,7 +452,7 @@ const Hero = () => {
 
     {/* IMAGINE SECTION */}
     <section 
-      className="relative min-h-[500px] md:min-h-[600px] w-full bg-cover bg-center bg-no-repeat py-20 px-6 flex items-center justify-center"
+      className="relative min-h-[500px] md:min-h-150 w-full bg-cover bg-center bg-no-repeat py-20 px-6 flex items-center justify-center"
       style={{ backgroundImage: "url('/src/assets/imagin.jpg')" }}
     >
       <div className="absolute inset-0 bg-black/85 md:bg-black/80"></div>
@@ -502,7 +515,7 @@ const Hero = () => {
     {/* PRICING SECTION */}
     <section className="bg-[#F4F1EB] px-6 py-20 font-sans text-center">
       <div className="mx-auto max-w-4xl">
-        <h2 className="font-serif text-[22px] md:text-[27px] font-semibold text-[#2d252a]">
+        <h2 className="font-serif text-[22px] md:text-[40 px] font-semibold text-[#2d252a]">
           Your Love Story Deserves a <span className="italic font-medium text-[#ff4d3d]">New Chapter</span>
         </h2>
         <p className="mt-6 text-[14px] md:text-[15px] leading-relaxed text-[#7a727f]">
@@ -518,7 +531,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <button className="mt-10 w-full md:w-auto rounded-xl bg-[#e95445] px-10 py-5 text-[16px] font-bold text-white shadow-xl">
+        <button className="mt-10 w-full md:w-auto rounded-xl bg-[#e95445] px-10 py-5 text-[12px] md:text-[15px] font-bold text-white shadow-xl">
           Yes, I Want to Break My Pattern — Register @ ₹99
         </button>
 
