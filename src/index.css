@@ -1,0 +1,45 @@
+/* Import fonts from Google CDN */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colors */
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #FAF7F5;
+  --border: #e5e4e7;
+  --accent: #e95445;
+
+  /* Font Definitions - Updated to match Google Fonts exactly */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    @apply bg-[#f6f2ef] text-[#6b6375] antialiased;
+    font-family: var(--font-sans);
+  }
+
+  /* Utilities to ensure Tailwind classes use your variables */
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+
+  .font-serif, .font-playfair-display {
+    font-family: var(--font-serif);
+  }
+
+  /* Global Heading Styles */
+  h1, h2, h3, .h-serif {
+    font-family: var(--font-serif);
+    @apply text-[#2d252a];
+  }
+}
