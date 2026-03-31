@@ -449,7 +449,7 @@ And I built this workshop because you deserve the same thing.
               </div>
               <h3 className="text-gray-800 font-serif font-semibold text-[14px] leading-snug">{item.title}</h3>
               <p className="text-gray-500 text-[11px] mt-3 leading-relaxed">{item.desc}</p>
-              <p className="text-red-500 font-bold mt-5 text-sm">{item.price}</p>
+              <p className="text-red-500 font-bold mt-5 text-sm line-through">{item.price}</p>
             </div>
           ))}
         </div>
