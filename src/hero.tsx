@@ -11,7 +11,13 @@ import globeIcon from './assets/icon/globe.svg'
 import headphonesIcon from './assets/icon/headphone.svg'
 import overlayImg from './assets/Overlay.png'
 import DotIcon from './assets/icon/dot.svg'
-
+import HeroImg from './assets/landing.png'
+import Image from "./assets/image.png"
+import Logos from "./assets/logos.png"
+import Banner2 from "./assets/banner2.png"
+import MadhuLak from "/src/assets/MadhuLakhlan.png"
+import Chat from "/src/assets/chat.png"
+import Imagin from "/src/assets/imagin.jpg"
 const Hero = () => {
     const points = [
         "You give everything in a relationship and still feel alone, unseen, or like you're too much.",
@@ -161,7 +167,7 @@ const Hero = () => {
           <div className="relative z-10 rounded-[24px]  p-[8px] md:p-[10px] ">
             <div className="h-[280px] w-[220px] overflow-hidden rounded-[18px] md:h-[380px] md:w-[350px]">
               <img
-                src="/src/assets/landing.png"
+                src={HeroImg}
                 alt="Couple Silhouette"
                 className="h-full w-full object-cover"
               />
@@ -213,7 +219,7 @@ const Hero = () => {
    <section className="w-full font-sans">
       <div className="relative h-[300px] md:h-[800px] w-full overflow-hidden">
         <img
-          src="/src/assets/image.png"
+          src={Image}
           alt="Couple"
           className="w-full h-full object-cover"
         />
@@ -284,7 +290,7 @@ const Hero = () => {
         </h3>
         <div className="flex flex-wrap items-center justify-center gap-6 md:gap-9 w-full h-full md:h-[110px]">
             <img
-              src="/src/assets/logos.png"
+              src={Logos}
               alt="logos"
               className="md:h-full w-auto md:w-full object-contain"
             />
@@ -326,7 +332,7 @@ const Hero = () => {
     </section>
 
     <div className="w-full h-[300px] md:h-[800px] bg-[#f6f2ef]">
-        <img src="/src/assets/banner2.png" alt="banner2" className="w-full h-full object-cover" />
+        <img src={Banner2} alt="banner2" className="w-full h-full object-cover" />
     </div>
 
     {/* MENTOR SECTION */}
@@ -344,7 +350,7 @@ const Hero = () => {
           <div className="flex flex-col items-center md:items-start">
             <div className="rounded-[20px] shadow-lg w-[240px] h-[300px] md:w-[240px] md:h-[255px] overflow-hidden">
               <img
-                src="/src/assets/MadhuLakhlan.png" 
+                src={MadhuLak} 
                 alt="Madhu Lakhlan"
                 className="w-full h-full object-cover"
               />
@@ -418,7 +424,7 @@ And I built this workshop because you deserve the same thing.
                 Here's what past attendees shared — in their own words.
             </p>
             <div className="mt-10">
-                <img src="/src/assets/chat.png" alt="chat" className="w-full h-auto object-contain" />
+                <img src={Chat} alt="chat" className="w-full h-auto object-contain" />
             </div>
         </div>
     </section>
@@ -453,7 +459,7 @@ And I built this workshop because you deserve the same thing.
     {/* IMAGINE SECTION */}
     <section 
       className="relative min-h-[500px] md:min-h-150 w-full bg-cover bg-center bg-no-repeat py-20 px-6 flex items-center justify-center"
-      style={{ backgroundImage: "url('/src/assets/imagin.jpg')" }}
+      style={{ backgroundImage: `url(${Imagin})` }}
     >
       <div className="absolute inset-0 bg-black/85 md:bg-black/80"></div>
 
